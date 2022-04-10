@@ -12,10 +12,18 @@ function App() {
     console.log(counter*value);
     setCounter (counter*value);
   }
+  const change = () =>{
+    if(counter%2===0){
+      return <h1 className='green'>Counter : {counter} </h1>
+    }else{
+      return <h1 className='red'>Counter : {counter} </h1>
+    }
+  }
   return (
     <div className="App">
-      Hello Salem
-      <h2>Counter : {counter} </h2>
+      
+      {change()}
+      {/* <h2>Counter : {counter} </h2> */}
       <button onClick={()=>{
         handleChange(1)
       }}
